@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link
+      rel="preconnect"
+      href="https://fonts.googleapis.com" />
+    <link
+      rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap"
+      rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="style.css" />
+  </head>
+  <body>
+    <div id="error-container"></div>
+    <div class="weather-container">
+      <div class="search-box">
+        <input
+          type="text"
+          id="city-input"
+          placeholder="Enter city name..." />
+        <button title="Search" id="search-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round">
+            <circle
+              cx="11"
+              cy="11"
+              r="8"></circle>
+            <line
+              x1="21"
+              y1="21"
+              x2="16.65"
+              y2="16.65"></line>
+          </svg>
+        </button>
+      </div>
+
+      <div class="weather-info">
+        <div
+          class="weather-icon"
+          id="weather-icon"></div>
+        <h1 id="temperature">--°C</h1>
+        <h2 id="location">--</h2>
+        <p id="description">--</p>
+      </div>
+
+      <div class="weather-details">
+        <div class="detail-card">
+          <small>Humidity</small>
+          <p id="humidity">--%</p>
+        </div>
+        <div class="detail-card">
+          <small>Wind Speed</small>
+          <p id="wind-speed">-- m/s</p>
+        </div>
+      </div>
+
+      <div class="forecast-container">
+        <div class="forecast-title">5-Day Forecast</div>
+        <div
+          class="forecast-grid"
+          id="forecast-grid">
+          <!-- Forecast items will be injected here -->
+        </div>
+      </div>
+    </div>
+    <script src="main.js"></script>
+  </body>
+</html>
